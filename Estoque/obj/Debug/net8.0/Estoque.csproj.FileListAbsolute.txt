@@ -1,0 +1,14 @@
+/home/nicolas/Documentos/estqoue/Estoque/bin/Debug/net8.0/Estoque
+/home/nicolas/Documentos/estqoue/Estoque/bin/Debug/net8.0/Estoque.deps.json
+/home/nicolas/Documentos/estqoue/Estoque/bin/Debug/net8.0/Estoque.runtimeconfig.json
+/home/nicolas/Documentos/estqoue/Estoque/bin/Debug/net8.0/Estoque.dll
+/home/nicolas/Documentos/estqoue/Estoque/bin/Debug/net8.0/Estoque.pdb
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.GeneratedMSBuildEditorConfig.editorconfig
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.AssemblyInfoInputs.cache
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.AssemblyInfo.cs
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.csproj.CoreCompileInputs.cache
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.dll
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/refint/Estoque.dll
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.pdb
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.genruntimeconfig.cache
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/ref/Estoque.dll
