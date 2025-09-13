@@ -7,3 +7,7 @@ Sobre o projeto de ontem, hoje eu fiz mais algumas alterações nele... Onde nó
 
 Lógicas usadas: laço foreach, laço de repetição while, interação de menus com switch, entrada de dados, creio que seja isso. Sigo melhorando! Aceita dicas e opiniões.
 
+Atualização do pequeno projeto Estoque em C#: Tivemos uma melhoria da sintaxe da tela de validação de login... Não é como eu espero, mas foi o que ainda consegui fazer. Fizemos uma classe chamada Login e a instanciamos para podermos chama-lá através de um método. Criamos objetos da mesma.
+
+Para efeturamos o login, colocamos a lógica de if para fazermos a validação do email e senha do usuario. Sigo pensando em como deixar melhor!
+
