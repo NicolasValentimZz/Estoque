@@ -12,3 +12,4 @@
 /home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.pdb
 /home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.genruntimeconfig.cache
 /home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/ref/Estoque.dll
+/home/nicolas/Documentos/estqoue/Estoque/obj/Debug/net8.0/Estoque.sourcelink.json

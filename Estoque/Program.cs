@@ -1,34 +1,67 @@
-﻿List<Produto> produto = [];
+﻿using System.Runtime.CompilerServices;
 
-bool login = false;
+List<Produto> produto = [];
+List<Login> login = new List<Login>();
 
-while (!login)
+bool loggin = false;
+
+while (!loggin)
 {
-    Usuario user = new();
-    Console.WriteLine("Tela de Login");
-    Console.WriteLine("Digite seu email:");
-    user.Email = Console.ReadLine();
-    Console.WriteLine("Digite sua senha: ");
-    user.Senha = Console.ReadLine();
-
-    if (user.Email == "nvalentim825@gmail.com" && user.Senha == "1234")
-    {
-        Console.WriteLine("Login bem-sucedido");
-        login = true;
-    }
-}
-    bool continuar = true;
-    while(continuar)
-{
-    Console.WriteLine("1. Cadastro de Produto");
-    Console.WriteLine("2. Consultar Produto");
-    Console.WriteLine("3. Cadastrar Usuario:");
+    Login log = new Login();
+    Console.Clear();
+    Console.WriteLine("1. Cadastrar Usuario");
+    Console.WriteLine("2. Fazer login");
+    Console.WriteLine("3. Sair");
     int opcao = int.Parse(Console.ReadLine());
 
     switch (opcao)
     {
         case 1:
+            Console.WriteLine("Digite o email do usuario:");
+            log.Email = Console.ReadLine();
+            Console.WriteLine("Digite a senha do usuario: ");
+            log.Senha = Console.ReadLine();
+            login.Add(log);
+            break;
+        case 2:
+            Console.WriteLine("Digite email de usuario: ");
+            log.Email = Console.ReadLine();
+            Console.WriteLine("Digite a senha de Usuario: ");
+            log.Senha = Console.ReadLine();
+            foreach (var Log   in login)
+            {
+                Console.WriteLine("Login bem sucecido!");
+                loggin = true;
+            }
+
             
+
+            break;
+        case 3:
+            Console.WriteLine("Voce desjesa sair: S/N");
+            string escolha1 = Console.ReadLine().ToLower();
+            if (escolha1 == "S")
+            {
+                Console.WriteLine("Saindo...");
+                loggin = false;
+            }
+            break;
+    }
+
+    
+}
+    bool continuar = true;
+while (continuar)
+{
+    Console.WriteLine("1. Cadastro de Produto");
+    Console.WriteLine("2. Consultar Produto");
+    Console.WriteLine("3. Sair");
+    int opcao = int.Parse(Console.ReadLine());
+
+    switch (opcao)
+    {
+        case 1:
+
             Produto novosProdutos = new();
             Console.WriteLine("Digite o id do produto: ");
             novosProdutos.Id = int.Parse(Console.ReadLine());
@@ -50,8 +83,13 @@ while (!login)
             break;
 
         case 3:
-            Console.WriteLine("Cadastro de usuario:");
-            Console.WriteLine("\nDigite o email de cadastro do usuario:");
+            Console.WriteLine("Voce deseja sair: S/N");
+            string escolha = Console.ReadLine().ToLower();
+            if (escolha == "S")
+            {
+                Console.WriteLine("saindo...");
+                Environment.Exit(0);
+            }
             
             break;
     }
