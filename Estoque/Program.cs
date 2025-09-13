@@ -1,55 +1,46 @@
 ﻿using System.Runtime.CompilerServices;
-
+List<Login> log = new();
 List<Produto> produto = [];
-List<Login> login = new List<Login>();
+Login login = new Login();
 
 bool loggin = false;
-
 while (!loggin)
 {
-    Login log = new Login();
-    Console.Clear();
-    Console.WriteLine("1. Cadastrar Usuario");
-    Console.WriteLine("2. Fazer login");
-    Console.WriteLine("3. Sair");
-    int opcao = int.Parse(Console.ReadLine());
+    Console.WriteLine("1. Fazer Login");
+    Console.WriteLine("2. Sair");
+    int opcao = Convert.ToInt32(Console.ReadLine());
 
     switch (opcao)
     {
         case 1:
-            Console.WriteLine("Digite o email do usuario:");
-            log.Email = Console.ReadLine();
-            Console.WriteLine("Digite a senha do usuario: ");
-            log.Senha = Console.ReadLine();
-            login.Add(log);
-            break;
-        case 2:
-            Console.WriteLine("Digite email de usuario: ");
-            log.Email = Console.ReadLine();
-            Console.WriteLine("Digite a senha de Usuario: ");
-            log.Senha = Console.ReadLine();
-            foreach (var Log   in login)
+            Console.WriteLine("Digite seu email de login");
+            login.Email = Console.ReadLine();
+            Console.WriteLine("Digite sua senha de login");
+            login.Password = Console.ReadLine();
+
+
+            if (login.Email == "nvalentim@gmail.com" && login.Password == "0809Ni12@")
             {
-                Console.WriteLine("Login bem sucecido!");
+                Console.WriteLine("login bem sucedido ");
                 loggin = true;
             }
-
+            else
+            {
+                Console.WriteLine("Login invalido!");
+            }
+    
+                       
+            
+            
             
 
             break;
-        case 3:
-            Console.WriteLine("Voce desjesa sair: S/N");
-            string escolha1 = Console.ReadLine().ToLower();
-            if (escolha1 == "S")
-            {
-                Console.WriteLine("Saindo...");
-                loggin = false;
-            }
-            break;
     }
-
-    
 }
+
+
+
+
     bool continuar = true;
 while (continuar)
 {
@@ -77,7 +68,7 @@ while (continuar)
             {
                 if (item.Id == IdConsulta)
                 {
-                    Console.WriteLine($"{item.Id}, {item.Nome}");
+                    Console.WriteLine($"{item.Nome}, {item.Id}");
                 }
             }
             break;
@@ -87,8 +78,9 @@ while (continuar)
             string escolha = Console.ReadLine().ToLower();
             if (escolha == "S")
             {
+                continuar = false;
                 Console.WriteLine("saindo...");
-                Environment.Exit(0);
+                
             }
             
             break;
