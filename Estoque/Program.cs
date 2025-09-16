@@ -1,39 +1,48 @@
-﻿using System.Runtime.CompilerServices;
+using System.Runtime.CompilerServices;
 List<Login> log = new();
 List<Produto> produto = [];
-Login login = new Login();
+
 
 bool loggin = false;
 while (!loggin)
 {
-    Console.WriteLine("1. Fazer Login");
-    Console.WriteLine("2. Sair");
+    Login login = new Login();
+
+    Console.WriteLine("1. Cadastro de login");
+    Console.WriteLine("2. Fazer Login");
+    Console.WriteLine("3. Sair");
     int opcao = Convert.ToInt32(Console.ReadLine());
 
     switch (opcao)
     {
+
+        
         case 1:
-            Console.WriteLine("Digite seu email de login");
+            Console.WriteLine("Digite o email de login a ser cadastrado: ");
             login.Email = Console.ReadLine();
-            Console.WriteLine("Digite sua senha de login");
-            login.Password = Console.ReadLine();
+            log.Add(login);
+            break;
+        case 2:
 
-
-            if (login.Email == "nvalentim@gmail.com" && login.Password == "0809Ni12@")
+            try
             {
-                Console.WriteLine("login bem sucedido ");
-                loggin = true;
+                Console.WriteLine("Digite seu email:\n ");
+                login.Email = Console.ReadLine();
+                for (int i = 0; i >= 0; i--)
+                {
+                    if (log[i].Email == login.Email)
+                    {
+                        Console.WriteLine("\nlogin realizado com sucesso!\n");
+                        loggin = true;
+                    }
+                }
             }
-            else
+            catch
             {
-                Console.WriteLine("Login invalido!");
+                Console.WriteLine("\nDigite um email valido!\n");
+              
+               ;
             }
-    
-                       
-            
-            
-            
-
             break;
     }
 }
@@ -76,13 +85,20 @@ while (continuar)
         case 3:
             Console.WriteLine("Voce deseja sair: S/N");
             string escolha = Console.ReadLine().ToLower();
-            if (escolha == "S")
+            for (int i = 0; i < escolha.Length; i++)
             {
-                continuar = false;
-                Console.WriteLine("saindo...");
-                
+                if (escolha[i] == 's')
+                {
+                    Console.WriteLine("Saindo...");
+                    continuar = false;
+                }
+                else
+                {
+                    Console.WriteLine("Continuando...");
+                }
             }
-            
+
             break;
+            
     }
 }
